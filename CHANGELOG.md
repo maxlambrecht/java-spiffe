@@ -2,6 +2,10 @@
 
 ## [Unreleased]
 
+### Added
+
+* Add `SpiffeIdVerifier.acceptIdPrefix()`, a factory method for verifiers that accept a SPIFFE ID and any SPIFFE ID under its path, matching on path segment boundaries in the same trust domain
+
 ### Fixed
 
 * Honor sub-second initialization timeouts in `DefaultX509Source`, `DefaultJwtSource` and `CachedJwtSource`. The `initTimeout` option and the `spiffe.newX509Source.timeout` and `spiffe.newJwtSource.timeout` system properties were truncated to whole seconds, so a timeout below one second failed `newSource` immediately
